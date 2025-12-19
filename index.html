@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Drive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-layer">
+            <div id="hud" class="hidden">
+                <div class="stat-box">
+                    <span class="label">Mood</span>
+                    <span id="mood-display">😊</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">Score</span>
+                    <span id="score-display">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">Distance</span>
+                    <span id="distance-display">0m</span>
+                </div>
+                <div class="balance-container">
+                    <div class="label">Health Balance</div>
+                    <div class="balance-bar-bg">
+                        <div id="balance-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="start-screen" class="screen">
+                <h1 class="title">Healthy Drive</h1>
+                <div class="mascot-preview">🌸</div>
+                <p>Use <strong>Arrow Keys</strong> or <strong>Tap Sides</strong> to move.</p>
+                <p>Collect 🥗🍎💧 | Avoid 🍩🥤🍪</p>
+                <button id="start-btn">Start Run</button>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h1>Out of Balance!</h1>
+                <p id="final-score">Score: 0</p>
+                <p id="final-distance">Distance: 0m</p>
+                <div class="tip-box">
+                    <p><strong>Health Tip:</strong></p>
+                    <p>Processed sugars can spike insulin levels. Try whole foods!</p>
+                </div>
+                <button id="restart-btn">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
